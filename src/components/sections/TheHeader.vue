@@ -2,13 +2,15 @@
 
 <template>
   <header>
-    <div class="button"></div>
-    <div class="logo">
-      <img src="" alt="" />
+    <div class="button">
+      <p>Light</p>
     </div>
-    <nav class="flex">
-      <a href="About">About Nat</a>
-      <a href="Contact">Contact</a>
+    <div class="logo">
+      <h2>nat designs</h2>
+    </div>
+    <nav class="links">
+      <div class="button"><p>About Nat</p></div>
+      <div class="button"><p>Contact</p></div>
     </nav>
   </header>
 </template>
@@ -19,6 +21,25 @@ header {
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   height: 100px;
-  background-color: var(--primary-first);
+  align-items: center;
+
+  margin: 0px 60px;
+}
+
+.links {
+  display: flex;
+  justify-content: end;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.logo {
+  justify-self: center;
+}
+
+.logo h2 {
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+  color: var(--color-white);
 }
 </style>
