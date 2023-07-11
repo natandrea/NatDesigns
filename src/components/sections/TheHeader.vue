@@ -20,10 +20,11 @@ header {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
+  width: 100%;
   height: 100px;
   align-items: center;
-
-  margin: 0px 60px;
+  position: absolute;
+  padding: 0px 110px;
 }
 
 .links {
@@ -41,5 +42,6 @@ header {
   text-transform: uppercase;
   letter-spacing: 0.4rem;
   color: var(--color-white);
+  font-size: 2rem;
 }
 </style>

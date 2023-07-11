@@ -3,6 +3,7 @@
   --color-white: #ffffff;
   --color-black: #181818;
   --color-grey: #d9d9d9;
+  --color-glass: #d9d9d936;
 
   --primary-first: #f7823e;
   --primary-second: #cd5d47;
@@ -10,8 +11,6 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-  }
 }
 
 *,
