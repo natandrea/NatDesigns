@@ -4,7 +4,7 @@
   <section class="hero">
     <img src="./../../assets/images/1.png" alt="" />
 
-    <div class="position"></div>
+    <div class="scroll"></div>
   </section>
 </template>
 
@@ -16,7 +16,8 @@
   border-radius: 50px;
   display: flex;
   flex-direction: row-reverse;
-  padding-top: 50px;
+  padding-top: 100px;
+  flex-grow: 0 0 100%;
 }
 
 .hero > img {

@@ -14,4 +14,10 @@ import TheFooter from "./components/sections/TheFooter.vue";
   </footer>
 </template>
 
-<style scoped></style>
+<style scoped>
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+</style>

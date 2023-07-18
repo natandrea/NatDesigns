@@ -1,9 +1,19 @@
 <script setup>
+import CollagePhotos from "../sections/CollagePhotos.vue";
+import ThePhrase from "../sections/ThePhrase.vue";
 import VideoRender from "../sections/VideoRender.vue";
+import AnimationProjects from "../sections/AnimationProjects.vue";
+import WebProjects from "../sections/WebProjects.vue";
+import ImageSlider from "../ImageSlider.vue";
 </script>
 
 <template>
   <VideoRender />
+  <CollagePhotos />
+  <ThePhrase />
+  <AnimationProjects />
+  <WebProjects />
+  <ImageSlider />
 </template>
 
 <style></style>

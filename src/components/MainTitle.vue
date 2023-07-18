@@ -2,7 +2,7 @@
 
 <template>
   <div class="subtitle" component="MainTitle">
-    <h1></h1>
+    <h1>3D ANIMATION</h1>
     <img src="" alt="" />
   </div>
 </template>

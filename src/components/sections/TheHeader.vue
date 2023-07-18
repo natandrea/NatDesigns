@@ -24,7 +24,8 @@ header {
   height: 100px;
   align-items: center;
   position: absolute;
-  padding: 0px 110px;
+  top: 65px;
+  padding: 0px 160px;
 }
 
 .links {

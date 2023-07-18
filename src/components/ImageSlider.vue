@@ -2,8 +2,12 @@
 
 <template>
   <div class="slider">
-    <img src="" alt="" />
+    <img src="./../../assets/images/11.png" alt="" />
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.slider > img {
+  width: 100%;
+}
+</style>

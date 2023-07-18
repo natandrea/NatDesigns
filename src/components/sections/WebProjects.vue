@@ -1,9 +1,20 @@
-<script setup></script>
+<script setup>
+import ImageSlider from "../ImageSlider.vue";
+</script>
 
 <template>
-  <section class="web">
-    <h1 class="project_title position"></h1>
+  <section>
+    <h1 class="project_title position">NATY PASTELERIA</h1>
+    <ImageSlider />
   </section>
 </template>
 
-<style scoped></style>
+<style scoped>
+section {
+  height: 800px;
+}
+
+h1 {
+  color: var(--color-white);
+}
+</style>

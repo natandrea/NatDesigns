@@ -29,6 +29,10 @@ body {
   background-color: var(--color-black);
 }
 
+section {
+  width: 1200px;
+}
+
 .button {
   display: flex;
   width: 104px;
@@ -37,4 +41,10 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 20px;
+}
+
+@media screen and (max-width: 1250px) {
+  section {
+    width: 900px;
+  }
 }
