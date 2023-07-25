@@ -1,10 +1,23 @@
-<script setup></script>
+<script setup>
+const props = defineProps({
+  title: {
+    type: String,
+    default: () => "Título",
+  },
+});
+</script>
 
 <template>
   <div class="subtitle" component="MainTitle">
-    <h1>3D ANIMATION</h1>
-    <img src="" alt="" />
+    <img src="/images/13.png" alt="" />
+    <h1>{{ title }}</h1>
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+h1 {
+  color: var(--color-white);
+  text-transform: uppercase;
+  font-size: 6rem;
+}
+</style>

@@ -1,14 +1,18 @@
-<script setup></script>
+<script setup>
+function handleMouseMove() {
+  console.log("g");
+}
+</script>
 
 <template>
-  <section>
-    <img id="img__01" src="./../../assets/images/2.jpg" alt="" />
-    <img id="img__02" src="./../../assets/images/5.jpg" alt="" />
-    <img id="img__03" src="./../../assets/images/4.jpg" alt="" />
-    <img id="img__04" src="./../../assets/images/3.jpg" alt="" />
-    <img id="img__05" src="./../../assets/images/6.jpg" alt="" />
-    <img id="img__06" src="./../../assets/images/7.jpg" alt="" />
-    <img id="img__07" src="./../../assets/images/8.jpg" alt="" />
+  <section @mousemove="handleMouseMove()">
+    <img id="img__01" class="card" src="/images/2.jpg" alt="" />
+    <img id="img__02" class="card" src="/images/5.jpg" alt="" />
+    <img id="img__03" class="card" src="/images/4.jpg" alt="" />
+    <img id="img__04" class="card" src="/images/3.jpg" alt="" />
+    <img id="img__05" class="card" src="/images/6.jpg" alt="" />
+    <img id="img__06" class="card" src="/images/7.jpg" alt="" />
+    <img id="img__07" class="card" src="/images/8.jpg" alt="" />
   </section>
 </template>
 

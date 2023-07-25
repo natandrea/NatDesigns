@@ -8,6 +8,10 @@
   --primary-first: #f7823e;
   --primary-second: #cd5d47;
   --primary-third: #8b484e;
+
+  --section-width-l: 1200px;
+  --section-width-m: 900px;
+  --section-width-s: 600px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -29,8 +33,9 @@ body {
   background-color: var(--color-black);
 }
 
-section {
-  width: 1200px;
+section,
+.page--width {
+  width: var(--section-width-l);
 }
 
 .button {
@@ -44,7 +49,8 @@ section {
 }
 
 @media screen and (max-width: 1250px) {
-  section {
-    width: 900px;
+  section,
+  .page--width {
+    width: var(--section-width-m);
   }
 }

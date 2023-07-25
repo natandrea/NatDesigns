@@ -2,7 +2,7 @@
 
 <template>
   <section class="hero">
-    <img src="./../../assets/images/1.png" alt="" />
+    <img src="/images/1.png" alt="" />
 
     <div class="scroll"></div>
   </section>

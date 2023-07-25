@@ -1,8 +1,14 @@
-<script setup></script>
+<script setup>
+import ImageSlider from "../ImageSlider.vue";
+import MainTitle from "../MainTitle.vue";
+</script>
 
 <template>
   <section>
-    <h1 class="project_title position">TV</h1>
+    <div class="title--wrapper page--width">
+      <MainTitle title="3D ANIMATION" />
+      <h1 class="project_title position">TV</h1>
+    </div>
   </section>
 </template>
 

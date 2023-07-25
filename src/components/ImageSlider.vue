@@ -1,13 +1,20 @@
-<script setup></script>
+<script setup>
+const props = defineProps({
+  title: {
+    type: URL,
+    default: () => "",
+  },
+});
+</script>
 
 <template>
-  <div class="slider">
-    <img src="./../../assets/images/11.png" alt="" />
+  <div class="slider" component="ImageSlider">
+    <div>{{ Image }}</div>
   </div>
 </template>
 
 <style scoped>
 .slider > img {
-  width: 100%;
+  width: 90%;
 }
 </style>
