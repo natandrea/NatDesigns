@@ -7,8 +7,8 @@ import MainTitle from "../MainTitle.vue";
   <section>
     <div class="title--wrapper page--width">
       <MainTitle title="3D ANIMATION" />
-      <h1 class="project_title position">TV</h1>
     </div>
+    <h1 class="project_title position">TV</h1>
   </section>
 </template>
 
@@ -17,9 +17,15 @@ section {
   height: 800px;
 }
 
+.title--wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
 h1 {
   display: flex;
   color: var(--color-white);
   flex-direction: row-reverse;
+  top: 80px;
 }
 </style>

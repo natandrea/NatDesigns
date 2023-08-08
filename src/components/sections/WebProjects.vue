@@ -7,26 +7,26 @@ import MainTitle from "../MainTitle.vue";
   <section>
     <div class="title--wrapper page--width">
       <MainTitle title="WEB DESIGNS" />
-      <h1 class="project_title position">NATY PASTELERIA</h1>
     </div>
-    <ImageSlider />
+    <h1 class="project_title position">NATY PASTELERIA</h1>
+    <ImageSlider :images="['11.png', '12.png', '11.png']" />
   </section>
 </template>
 
 <style scoped>
 section {
   height: 800px;
-  width: 100% !important;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
 }
 
-.ctitle--wrapper {
-  align-self: center;
+.title--wrapper {
+  display: flex;
+  flex-direction: row;
 }
 
 h1 {
+  display: flex;
   color: var(--color-white);
+  flex-direction: row;
+  top: 80px;
 }
 </style>

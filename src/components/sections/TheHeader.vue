@@ -26,6 +26,7 @@ header {
   position: absolute;
   top: 65px;
   padding: 0px 160px;
+  z-index: 6;
 }
 
 .links {

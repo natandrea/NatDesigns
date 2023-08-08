@@ -1,11 +1,30 @@
 <script setup>
-function handleMouseMove() {
-  console.log("g");
+import { ref, onMounted } from "vue";
+const cards = document.getElementsByClassName("card");
+const multipliers = ref([]);
+const translateConst = 40;
+
+onMounted(() => {
+  for (let i = 0; i < cards.length; i++) {
+    multipliers.value.push(Math.floor(Math.random() * 5) + 1);
+  }
+});
+
+function handleMouseMove(evt) {
+  for (let i = 0; i < cards.length; i++) {
+    const element = cards[i];
+    const multiplier = multipliers.value[i];
+    let hor = evt.clientX;
+    let ver = evt.clientY;
+    element.style.transform = `translate(${
+      (hor / translateConst) * multiplier
+    }px, ${(ver / translateConst) * multiplier}px)`;
+  }
 }
 </script>
 
 <template>
-  <section @mousemove="handleMouseMove()">
+  <section @mousemove="handleMouseMove">
     <img id="img__01" class="card" src="/images/2.jpg" alt="" />
     <img id="img__02" class="card" src="/images/5.jpg" alt="" />
     <img id="img__03" class="card" src="/images/4.jpg" alt="" />
@@ -18,12 +37,17 @@ function handleMouseMove() {
 
 <style scoped>
 section {
-  height: 800px;
+  height: 1000px;
+
+  width: 100%;
 }
+
 img {
   width: 12%;
   position: absolute;
   border-radius: 30px;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 20px 25px -5px,
+    rgba(255, 255, 255, 0.04) 0px 10px 10px -5px;
 }
 
 #img__01 {
