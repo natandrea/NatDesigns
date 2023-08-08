@@ -1,20 +1,19 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
 const props = defineProps({
-  title: {
-    type: String,
-    default: () => "",
+  images: {
+    type: Array,
+    default: () => [],
   },
 });
 
-const images = ref([""]);
 const currentIndex = ref(0);
 
 const slideInterval = 1000;
 let slideTimer;
 
 const updateSlide = () => {
-  currentIndex.value = (currentIndex.value + 1) % images.value.length;
+  currentIndex.value = (currentIndex.value + 1) % props.images.length;
   console.log(currentIndex.value);
   document.getElementById("slider").style.transform = `translateX(-${
     currentIndex.value * 100

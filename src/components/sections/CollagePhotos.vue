@@ -46,8 +46,7 @@ img {
   width: 12%;
   position: absolute;
   border-radius: 30px;
-  box-shadow: rgba(255, 255, 255, 0.1) 0px 20px 25px -5px,
-    rgba(255, 255, 255, 0.04) 0px 10px 10px -5px;
+  box-shadow: var(--shadow-1);
 }
 
 #img__01 {
