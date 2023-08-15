@@ -1,7 +1,7 @@
 <script setup>
 import { onMounted } from "vue";
-import ImageSlider from "../ImageSlider.vue";
-import MainTitle from "../MainTitle.vue";
+import ImageSlider from "./../ImageSlider.vue";
+import MainTitle from "./../MainTitle.vue";
 import { projects } from "@/lib/projects.js";
 
 onMounted(() => {
