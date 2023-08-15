@@ -1,26 +1,28 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
 const props = defineProps({
-  images: {
+  projects: {
     type: Array,
     default: () => [],
   },
 });
 
 const currentIndex = ref(0);
+const titles = ref([]);
 
-const slideInterval = 1000;
+const slideInterval = 2000;
 let slideTimer;
 
 const updateSlide = () => {
-  currentIndex.value = (currentIndex.value + 1) % props.images.length;
-  console.log(currentIndex.value);
+  currentIndex.value = (currentIndex.value + 1) % props.projects.length;
+
   document.getElementById("slider").style.transform = `translateX(-${
     currentIndex.value * 100
   }%)`;
 };
 
 onMounted(() => {
+  titles.value = props.projects.map((e) => e.title);
   slideTimer = setInterval(updateSlide, slideInterval);
 });
 
@@ -29,19 +31,31 @@ onUnmounted(onStop);
 </script>
 
 <template>
+  <h1 class="project_title position">{{ titles[currentIndex] }}</h1>
   <div class="slider-container">
     <div class="slider" id="slider">
-      <div v-for="(image, index) in images" class="slider-item" :key="index">
-        <img :src="`images/${image}`" />
+      <div
+        v-for="(project, index) in projects"
+        class="slider-item"
+        :key="index"
+      >
+        <a href="google.com" target="_blank">
+          <img :src="`images/${project.image}`"
+        /></a>
       </div>
     </div>
   </div>
 </template>
 
 <style scoped>
+h1 {
+  display: flex;
+  color: var(--color-white);
+  flex-direction: row;
+}
 .slider-container {
   overflow: hidden;
-  width: 70%;
+  width: 80%;
 }
 
 .slider {

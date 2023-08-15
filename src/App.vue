@@ -1,7 +1,12 @@
 <script setup>
+import { onMounted } from "vue";
 import { RouterLink, RouterView } from "vue-router";
 import TheHeader from "./components/sections/TheHeader.vue";
 import TheFooter from "./components/sections/TheFooter.vue";
+
+onMounted(() => {
+  document.documentElement.className = "";
+});
 </script>
 
 <template>

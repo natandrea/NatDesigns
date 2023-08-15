@@ -16,6 +16,23 @@
     rgba(255, 255, 255, 0.04) 0px 10px 10px -5px;
 }
 
+:root.light-theme {
+  --color-white: #ffffff;
+  --color-black: #ffffff;
+  --color-grey: #d9d9d9;
+
+  --primary-first: #f7823e;
+  --primary-second: #cd5d47;
+  --primary-third: #8b484e;
+
+  --section-width-l: 1200px;
+  --section-width-m: 900px;
+  --section-width-s: 600px;
+
+  --shadow-1: rgba(255, 255, 255, 0.1) 0px 20px 25px -5px,
+    rgba(255, 255, 255, 0.04) 0px 10px 10px -5px;
+}
+
 @media (prefers-color-scheme: dark) {
 }
 
@@ -54,5 +71,19 @@ section,
   section,
   .page--width {
     width: var(--section-width-m);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .button {
+    width: 94px;
+    height: 31px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .button {
+    width: 84px;
+    height: 21px;
   }
 }

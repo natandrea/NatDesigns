@@ -25,13 +25,45 @@ function handleMouseMove(evt) {
 
 <template>
   <section @mousemove="handleMouseMove">
-    <img id="img__01" class="card" src="/images/2.jpg" alt="" />
-    <img id="img__02" class="card" src="/images/5.jpg" alt="" />
-    <img id="img__03" class="card" src="/images/4.jpg" alt="" />
-    <img id="img__04" class="card" src="/images/3.jpg" alt="" />
-    <img id="img__05" class="card" src="/images/6.jpg" alt="" />
-    <img id="img__06" class="card" src="/images/7.jpg" alt="" />
-    <img id="img__07" class="card" src="/images/8.jpg" alt="" />
+    <a
+      href="https://www.behance.net/gallery/173992413/FRENEMIES"
+      target="_blank"
+      id="img__01"
+      ><img class="card" src="/images/2.jpg" alt="cover photo 2"
+    /></a>
+    <a href="" target="_blank" id="img__02"
+      ><img class="card" src="/images/5.jpg" alt="cover photo 5"
+    /></a>
+    <a
+      href="https://www.behance.net/gallery/173992113/SELF-DESTRUCTIVE-LOVE"
+      target="_blank"
+      id="img__03"
+      ><img class="card" src="/images/4.jpg" alt="cover photo 4"
+    /></a>
+    <a
+      href="https://www.behance.net/gallery/175025593/ANARU"
+      target="_blank"
+      id="img__04"
+      ><img class="card" src="/images/3.jpg" alt="cover photo 3"
+    /></a>
+    <a
+      href="https://www.behance.net/gallery/173991847/LA-PRESION-DE-LAS-REDES-SOCIALES"
+      target="_blank"
+      id="img__05"
+      ><img class="card" src="/images/6.jpg" alt="cover photo 6"
+    /></a>
+    <a
+      href="https://www.behance.net/gallery/173992703/METAVERSO-DE-LOS-SENTIDOS"
+      target="_blank"
+      id="img__06"
+      ><img class="card" src="/images/7.jpg" alt="cover photo 7"
+    /></a>
+    <a
+      href="https://www.behance.net/gallery/173992703/METAVERSO-DE-LOS-SENTIDOS"
+      target="_blank"
+      id="img__07"
+      ><img class="card" src="/images/8.jpg" alt="cover photo 8"
+    /></a>
   </section>
 </template>
 
@@ -43,10 +75,16 @@ section {
 }
 
 img {
-  width: 12%;
-  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   border-radius: 30px;
   box-shadow: var(--shadow-1);
+}
+
+a {
+  width: 12%;
+  position: absolute;
 }
 
 #img__01 {

@@ -20,15 +20,14 @@ h1 {
   text-transform: uppercase;
   font-size: 6rem;
   position: relative;
-  top: 60px;
   z-index: 2;
 }
 
 img {
   width: 40%;
   position: absolute;
-  top: 0px;
+  top: -40px;
   right: 250px;
-  z-index: 1;
+  z-index: -1;
 }
 </style>

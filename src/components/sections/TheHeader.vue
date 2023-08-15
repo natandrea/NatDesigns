@@ -1,10 +1,28 @@
-<script setup></script>
+<script setup>
+import { ref } from "vue";
+
+const currentTheme = ref("dark");
+const btnText = ref("Light");
+
+function handleClick() {
+  if (currentTheme.value == "dark") {
+    document.documentElement.className = "light-theme";
+    currentTheme.value = "light";
+    btnText.value = "Dark";
+  } else {
+    document.documentElement.className = "";
+    currentTheme.value = "dark";
+    btnText.value = "Light";
+  }
+}
+</script>
 
 <template>
   <header>
-    <div class="button">
-      <p>Light</p>
+    <div class="button" @click="handleClick">
+      <p>{{ btnText }}</p>
     </div>
+
     <div class="logo">
       <h2>nat designs</h2>
     </div>
@@ -45,5 +63,17 @@ header {
   letter-spacing: 0.4rem;
   color: var(--color-white);
   font-size: 2rem;
+}
+
+@media screen and (max-width: 900px) {
+  .logo h2 {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .logo h2 {
+    font-size: 0.5rem;
+  }
 }
 </style>
