@@ -30,7 +30,7 @@ img {
   position: absolute;
   z-index: 3;
   border-radius: 50px;
-  background: linear-gradient(136deg, #f7823e 0%, #8b484e 100%);
+  background: var(--gradient-1);
   box-shadow: var(--shadow-1);
 }
 </style>

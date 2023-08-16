@@ -1,5 +1,8 @@
 <script setup>
 import { ref } from "vue";
+import { useRouter } from "vue-router";
+
+const router = useRouter();
 
 const currentTheme = ref("dark");
 const btnText = ref("Light");
@@ -27,8 +30,30 @@ function handleClick() {
       <h2>nat designs</h2>
     </div>
     <nav class="links">
-      <div class="button"><p>About Nat</p></div>
-      <div class="button"><p>Contact</p></div>
+      <div
+        class="button"
+        @click="
+          () => {
+            router.push({
+              name: 'about',
+            });
+          }
+        "
+      >
+        <p>About Nat</p>
+      </div>
+      <div
+        class="button"
+        @click="
+          () => {
+            router.push({
+              name: 'contact',
+            });
+          }
+        "
+      >
+        <p>Contact</p>
+      </div>
     </nav>
   </header>
 </template>

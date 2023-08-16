@@ -8,10 +8,23 @@ import WebProjects from "../sections/WebProjects.vue";
 
 <template>
   <VideoRender />
+  <div class="blur"></div>
   <CollagePhotos />
   <ThePhrase />
   <AnimationProjects />
   <WebProjects />
 </template>
 
-<style></style>
+<style>
+.blur {
+  background-color: var(--primary-first);
+  width: 400px;
+  height: 400px;
+  border-radius: 300px;
+  position: absolute;
+  right: 0px;
+  top: 650px;
+  filter: blur(50px);
+  z-index: -1;
+}
+</style>
