@@ -10,7 +10,7 @@ const props = defineProps({
 <template>
   <div class="subtitle">
     <h1>{{ title }}</h1>
-    <img src="/images/13.svg" alt="" />
+    <div class="image--wrapper"></div>
   </div>
 </template>
 
@@ -23,11 +23,13 @@ h1 {
   z-index: 2;
 }
 
-img {
-  width: 40%;
+.image--wrapper {
+  width: 35%;
+  height: 240px;
   position: absolute;
   top: -40px;
   right: 250px;
   z-index: -1;
+  background-image: var(--main-title-img);
 }
 </style>

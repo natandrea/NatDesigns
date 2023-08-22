@@ -16,6 +16,7 @@
     rgba(255, 255, 255, 0.04) 0px 10px 10px -5px;
 
   --gradient-1: linear-gradient(136deg, #f7823e 0%, #8b484e 100%);
+  --main-title-img: url("/images/13.svg");
 }
 
 :root.light-theme {
@@ -40,6 +41,8 @@
     #ecb3a4 70.31%,
     #e7a7a3 100%
   );
+
+  --main-title-img: url("/images/14.png");
 }
 
 @media (prefers-color-scheme: dark) {
