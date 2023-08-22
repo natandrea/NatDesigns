@@ -1,6 +1,10 @@
 <script setup></script>
 <template>
-  <div class="prueba">Contact</div>
+  <section class="contact"></section>
 </template>
 
-<style scoped></style>
+<style scoped>
+.contact {
+  height: 800px;
+}
+</style>

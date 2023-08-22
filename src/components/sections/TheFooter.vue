@@ -19,7 +19,7 @@
         ><img src="/images/svg/Asset8.svg" alt=""
       /></a>
     </nav>
-
+    <div class="blur--5"></div>
     <div class="big__logo">
       <img src="/images/10.png" alt="" />
     </div>
@@ -63,5 +63,17 @@ nav img {
 
 .big__logo > img {
   width: 100%;
+}
+
+.blur--5 {
+  background-color: var(--primary-third);
+  width: 400px;
+  height: 400px;
+  border-radius: 300px;
+  position: absolute;
+  left: 500px;
+  bottom: -200px;
+  filter: blur(70px);
+  z-index: -5;
 }
 </style>
