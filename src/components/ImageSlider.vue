@@ -12,15 +12,14 @@ const titles = ref([]);
 
 const slideInterval = 2000;
 let slideTimer;
+const sliderPosition = ref("");
 
 const updateSlide = () => {
   currentIndex.value = (currentIndex.value + 1) % props.projects.length;
   let translate = currentIndex.value * 100;
   console.log(props.projects[currentIndex.value].title, translate);
 
-  document.getElementById(
-    "slider"
-  ).style.transform = `translateX(-${translate}%)`;
+  sliderPosition.value = `translateX(-${translate}%)`;
 };
 
 onMounted(() => {
@@ -35,7 +34,12 @@ onUnmounted(onStop);
 <template>
   <h1 class="project_title position">{{ titles[currentIndex] }}</h1>
   <div class="slider-container">
-    <div class="slider" id="slider" :ci="currentIndex">
+    <div
+      class="slider"
+      id="slider"
+      :ci="currentIndex"
+      :style="{ transform: sliderPosition }"
+    >
       <div
         v-for="(project, index) in projects"
         class="slider-item"
