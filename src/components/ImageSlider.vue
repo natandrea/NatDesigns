@@ -5,6 +5,10 @@ const props = defineProps({
     type: Array,
     default: () => [],
   },
+  rightAlign: {
+    type: Boolean,
+    default: () => false,
+  },
 });
 
 const currentIndex = ref(0);
@@ -32,7 +36,9 @@ onUnmounted(onStop);
 </script>
 
 <template>
-  <h1 class="project_title position">{{ titles[currentIndex] }}</h1>
+  <h1 class="project_title position" :class="rightAlign ? 'right-align' : ''">
+    {{ titles[currentIndex] }}
+  </h1>
   <div class="slider-container">
     <div
       class="slider"
@@ -55,9 +61,12 @@ onUnmounted(onStop);
 
 <style scoped>
 h1 {
-  display: flex;
   color: var(--color-white);
-  flex-direction: row;
+  width: 80%;
+}
+
+.right-align {
+  text-align: right;
 }
 .slider-container {
   overflow: hidden;

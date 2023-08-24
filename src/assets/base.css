@@ -17,6 +17,10 @@
 
   --gradient-1: linear-gradient(136deg, #f7823e 0%, #8b484e 100%);
   --main-title-img: url("/images/13.svg");
+  --footer-img: url("/images/10.png");
+  --insta-img: url("/images/svg/Asset8.svg");
+  --linkedin-img: url("/images/svg/Asset6.svg");
+  --behance-img: url("/images/svg/Asset7.svg");
 }
 
 :root.light-theme {
@@ -42,7 +46,11 @@
     #e7a7a3 100%
   );
 
-  --main-title-img: url("/images/14.png");
+  --main-title-img: url("/images/18.svg");
+  --footer-img: url("/images/9.png");
+  --insta-img: url("/images/svg/Asset4.svg");
+  --linkedin-img: url("/images/svg/Asset3.svg");
+  --behance-img: url("/images/svg/Asset5.svg");
 }
 
 @media (prefers-color-scheme: dark) {

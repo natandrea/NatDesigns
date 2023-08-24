@@ -2,7 +2,7 @@
 
 <template>
   <section class="hero">
-    <img src="/images/1.png" alt="" />
+    <img src="/images/21.png" alt="" />
     <h1>Welcome!</h1>
     <h3>Inmerse yourself in Nat´s digital experience</h3>
 

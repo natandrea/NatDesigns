@@ -16,13 +16,16 @@ onMounted(() => {
 </script>
 
 <template>
-  <section>
+  <section class="">
     <div class="title--wrapper">
       <MainTitle title="3D ANIMATION" />
     </div>
-    <ImageSlider
-      :projects="projects.filter((e) => e.category == 'animation')"
-    />
+    <div class="slider-component-wrapper">
+      <ImageSlider
+        :projects="projects.filter((e) => e.category == 'animation')"
+        :rightAlign="true"
+      />
+    </div>
   </section>
 </template>
 
@@ -30,10 +33,17 @@ onMounted(() => {
 section {
   height: 800px;
   width: 100% !important;
+  overflow: hidden;
 }
 
 .title--wrapper {
   display: flex;
   flex-direction: row-reverse;
+}
+
+.slider-component-wrapper {
+  width: 100%;
+  position: relative;
+  right: -20%;
 }
 </style>
